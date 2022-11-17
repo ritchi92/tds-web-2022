@@ -1,0 +1,33 @@
+.menu{
+	list-style-type:none;
+	display:block;
+	width:80%;
+	margin:auto;
+	font-size:1.5vw;
+	font-family:"Georgia";	
+	position: sticky;
+	background-color: #8a9299;
+	padding:15px;
+
+}
+.menu li{
+	padding: 25px;
+	display:inline;
+}
+
+.menu a{
+	text-decoration : none;
+	color:#f7d6b5;
+}
+body{
+	background-color:#5d697c;
+		
+}
+.acceuil{
+	color:#f7d6b5;
+}
+#propos{
+	color:#f7d6b5;
+	margin-top:1000px;
+	display:block;
+}

@@ -1,3 +1,7 @@
+html{
+	scroll-behavior:smooth;
+	
+}
 .menu{
 	list-style-type:none;
 	display:block;
@@ -23,11 +27,62 @@ body{
 	background-color:#5d697c;
 		
 }
+#bouton{
+	position: fixed;
+	width: 35px;
+	height: 25px;
+	bottom: 50px;
+	right: 30px;
+	display:block;
+}
 .acceuil{
 	color:#f7d6b5;
+	display:block;
+	margin-top:20px;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+	
 }
 #propos{
 	color:#f7d6b5;
 	margin-top:1000px;
 	display:block;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+
 }
+#competence{
+	color:#f7d6b5;
+	margin-top:1000px;
+	display:block;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+}
+#experience{
+	color:#f7d6b5;
+	margin-top:1000px;
+	display:block;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+}
+#formation{
+	color:#f7d6b5;
+	margin-top:1000px;
+	display:block;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+}
+#contact{
+	color:#f7d6b5;
+	margin-top:1000px;
+	display:block;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+}
+

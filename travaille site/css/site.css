@@ -8,6 +8,7 @@ html{
 	width:80%;
 	margin:auto;
 	font-size:1.5vw;
+	font-family:"Georgia";
 	font-family:"Georgia";	
 	position: sticky;
 	background-color: #8a9299;
@@ -34,10 +35,40 @@ body{
 	right: 30px;
 	display:block;
 }
+.domaine{
+	color:#f7d6b5;
+	display:block;
+	margin-top:20px;
+	margin-right:170px;
+	margin-left:0px;
+	margin-bottom:10px;
+	background-color:#3a4657;
+	width:100%;
+
+	
+}
 .titre{
 	color:#f7d6b5;
 	display:block;
 	text-decoration : underline;
+	margin-top:20px;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+	
+}
+
+p{
+	color:#f7d6b5;
+	display:block;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+	
+}
+h1{
+	color:#f7d6b5;
+	display:block;
 	margin-top:20px;
 	margin-right:170px;
 	margin-left:70px;
@@ -94,3 +125,65 @@ body{
 	margin-bottom:10px;
 }
 
+
+
+
+
+
+
+
+:root {
+  --css: #00b894;
+  --html: #e17055;
+  --python: #00b894;
+  --php: #00b894;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.container {
+  max-width: 720px;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.text-center { text-align:center; }
+
+.progressbar-wrapper {
+  background-color: #dfe6e9;
+  color: white;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.progressbar {
+  background-color: var(--progress);
+  color: white;
+  padding: 1rem;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.progressbar[title="css"] {
+   background-color: var(--css);
+}
+
+.progressbar[title="php"] {
+   background-color: var(--php);
+}
+
+.progressbar[title="Pyhton"] {
+   background-color: var(--python);
+}
+
+.progressbar[title="html"] {
+   background-color: var(--html);
+}
+  

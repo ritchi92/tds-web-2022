@@ -1,0 +1,49 @@
+<!doctype html>
+<script>
+	let $=function(id){
+	return document.getElementById(id);
+	};
+</script>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>compteur</title>
+  
+</head>
+<body>
+	 <textarea id="text" placeholder="saisir du texte"></textarea>
+	 
+	 <button> compter </button>
+	 
+	 <div id="result">---</div>
+	 
+	<fieldset>
+		<legend>option</legend>
+		<input type="radio" id="opt1" name="count-option" value=mots checked="checked">
+		<label for="opt1">mots</label>
+		<input type="radio" id="opt2" name="count-option" value=cars>
+		<label for="opt2">caractères</label>
+	
+	</fieldset>
+</body>
+<script>
+function calcMotsOuCar(){
+	let mot=$('text').value;
+			if($('opt1').checked){
+					$('result').innerHTML=mot.split(' ').length;
+			}else{
+				$('result').innerHTML=mot.length;
+			}
+	}
+
+
+	$('text').addEventListener('keyup',calcMotsOuCar);
+	document.querySelector("[name=count-option]").addEventListener('keyup',calcMotsOuCar);
+
+		
+	
+	
+		
+</script>
+</html>

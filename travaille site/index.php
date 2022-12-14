@@ -24,79 +24,146 @@
 				</ul>
 		</header>
 		<main>
+	<div class='backgroundacceuil'>
+		<h1 class='titre'>
+			<?php
+			$data=yaml_parse_file('yaml/aceuille.yaml');
+			//print_r($data);
+			echo $data["titre"];
+			?>
+		</h1>
+			<span id='acceuil'>
+
+				<?php
+					echo '<p>'.$data["nomprenom"].'</p>';
+					echo '<p>'.$data["accroche"].'</p>';
+				?>
+			</span>
+	</div>
+	
+	
+	<div class='backgroundpropos'>
+		<h1 class='titre'>
+			propos
+		</h1>
+		<?php
+		$data=yaml_parse_file('yaml/propos.yaml');
+		?>				
+		<span id='propos'>
+			<?php
+					echo '<p>'.$data["accroche"].'</p>';
+					echo '<p>'.$data["descrip"].'</p>';
+			?>
+		</span>
+	</div>
+
+
+
+
 		
+		<h1 class='titre'>
+			<?php
+			$data=yaml_parse_file('yaml/compétence.yaml');
+			?>
+		</h1>
+	
+		<span id='competence'>
 			<h1 class='titre'>
-<?php
-$data=yaml_parse_file('yaml/aceuille.yaml');
-//print_r($data);
-echo $data["titre"];
-?>
+				Compétences
 			</h1>
-			<p id='acceuil'>
-<?php
-	echo '<p>'.$data["nomprenom"].'</p>';
-	echo '<p>'.$data["accroche"].'</p>';
-?>
-			
 
-			</p>
-		
-				<h1 class='titre'>
-				propos
-				</h1>
-				
-			<p id='propos'>
-			teste
-			</p>
+			<div class="container">
+				<?php
+				foreach($data AS $domaine=>$tab){
+					echo '<h1 class="domaine">'.$domaine.'</h1>';
+					foreach($tab AS $nom=>$niveau){
+						echo '<p>'.$nom.'</p>';
+						echo '<div class="progressbar-wrapper">';
+						echo '<div title="css" class="progressbar" style="width:'.$niveau.'%;">'.$niveau.'%</div>';
+						echo '</div>';
+					}
+				}
+				?>	 
+			</div>
 			
-				<h1 class='titre'>
-<?php
-$data=yaml_parse_file('yaml/compétence.yaml');
-?>
-				</h1>
-				
-			<p id='competence'>
+			</span>
+				<?php
+				$data=yaml_parse_file('yaml/experience.yaml');
+				?>
+			<h1 class='titre'>
+				experience
+			</h1>
+			<span id='experience'>
+				<?php
+					echo '<p>'.$data["titre"].'</p>';
+					echo '<p>'.$data["descrip"].'</p>';
 
-				 <div class="container">
-<?php
-foreach($data AS $domaine=>$tab){
-	echo '<h1 class="domaine">'.$domaine.'</h1>';
-	foreach($tab AS $nom=>$niveau){
-		echo '<p>'.$nom.'</p>';
-		echo '<div class="progressbar-wrapper">';
-		echo '<div title="css" class="progressbar" style="width:'.$niveau.'%;">'.$niveau.'%</div>';
-		echo '</div>';
-	}
-}
-?>
+				?>
+			</span>
+			<?php
+			$data=yaml_parse_file('yaml/formation.yaml');
+			?>
+			<h1 class='titre'>
+				formation
+			</h1>
+			<span id='formation'>
+				<?php
+					echo '<p>'.$data["titre"].'</p>';
+					echo '<p>'.$data["descrip"].'</p>';
 
-					 
-				</div>
-			
-			</p>
-			
+				?>
+			</span>
+			<div class='backgroundcontact'>
+				<?php
+				$data=yaml_parse_file('yaml/contact.yaml');
+				?>
 				<h1 class='titre'>
-					experience
+					contact
 				</h1>
-				<p id='experience'>
-				
-			</p>
 			
-				<h1 class='titre'>
-					formation
-				</h1>
-			<p id='formation'>
-				
-			</p>
-			
-				<h1 class='titre'>
-				contact
-				</h1>
-			<p id='contact'>
-				
-				
-			</p>
-		
+				<span id='contact'>
+					<?php
+						echo '<p>'.$data["descrip"].'</p>';
+						echo '<p>'.$data["numero"].'</p>';
+						echo '<p>'.$data["reseaux"].'</p>';
+
+						echo'</span>';
+						echo'<h1 class="titre">'.$data["titre"].'</h1>';
+						echo'<span id="contacter">';
+						
+						echo '<p>'.$data["expediteur"].'</p>';
+						echo '<input type="text" name="prenom" value="" placeholder="votre nom et prénom"/>';
+						
+						echo '<p>'.$data["mdp"].'</p>';
+						echo '<input type="password" name="motdepasse" value="" placeholder="votre mot de passe" />';
+						
+						echo '<p>'.$data["civilite"].'</p>';
+						echo '<input type="radio" name="civi2" value="Mme" /> Madame
+							<input type="radio" name="civi2" value="Mlle" /> Mademoiselle
+							<input type="radio" name="civi2" value="Mr" checked="checked" /> Monsieur';
+						
+						echo '<p>'.$data["adresse"].'</p>';
+						echo'<input type="text" name="adresse" value="" placeholder="votre adresse" />';
+						
+						echo '<p>'.$data["objet"].'</p>';
+						echo '<textarea name="le-message" rows="1" cols="40" placeholder="saisisez votre raison"></textarea>';
+						
+						echo '<p>'.$data["contenu"].'</p>';
+						echo '<textarea name="le-message" rows="6" cols="40" placeholder="saisisez votre message"></textarea>';
+						
+						echo '<p>'.$data["captcha"].'</p>';
+						echo '<input type="radio" name="civi" value="Mme" /> oui
+								<input type="radio" name="civi" value="Mlle" /> non';
+						echo '<p>'.$data["envoi"].'</p>';
+						
+						echo '<input type="submit" value="Envoyer" />';
+						echo ' <input type="reset" value="Annuler" />';
+						
+						mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
+							
+					?>	
+				</span>
+			</div>
 		</main>		
 	</body>
 </html>

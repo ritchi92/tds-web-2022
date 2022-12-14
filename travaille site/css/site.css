@@ -2,6 +2,38 @@ html{
 	scroll-behavior:smooth;
 	
 }
+h1{
+	color:#f7d6b5;
+	display:flex;
+	text-decoration : underline;
+	margin-top:20px;
+	margin-right:170px;
+	margin-left:70px;
+	margin-bottom:10px;
+	width:50%:;
+	
+	
+}
+.backgroundcontact {
+	background-image: url("../image/contact.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+}
+.backgroundacceuil {
+	background-image: url("../image/image.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	
+}
+.backgroundpropos {
+	background-image: url("../image/propos.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	
+}
 .menu{
 	list-style-type:none;
 	display:block;
@@ -24,8 +56,7 @@ html{
 	color:#f7d6b5;
 }
 body{
-	background-color:#5d697c;
-		
+	background-color:#5d697c;		
 }
 #bouton{
 	position: fixed;
@@ -40,21 +71,21 @@ body{
 	display:block;
 	margin-top:20px;
 	margin-right:170px;
-	margin-left:0px;
+	margin-left:10px;
 	margin-bottom:10px;
 	background-color:#3a4657;
-	width:100%;
 
 	
 }
 .titre{
 	color:#f7d6b5;
-	display:block;
+	display:flex;
 	text-decoration : underline;
 	margin-top:20px;
 	margin-right:170px;
 	margin-left:70px;
 	margin-bottom:10px;
+	width:50%:;
 	
 }
 
@@ -66,27 +97,18 @@ p{
 	margin-bottom:10px;
 	
 }
-h1{
-	color:#f7d6b5;
-	display:block;
-	margin-top:20px;
-	margin-right:170px;
-	margin-left:70px;
-	margin-bottom:10px;
-	
-}
 #acceuil{
 	color:#f7d6b5;
 	display:block;
 	margin-top:20px;
 	margin-right:170px;
 	margin-left:70px;
-	margin-bottom:10px
+	margin-bottom:10px;
 }
 #propos{
 	color:#f7d6b5;
-	margin-top:1000px;
 	display:block;
+	margin-top:20px;
 	margin-right:170px;
 	margin-left:70px;
 	margin-bottom:10px;
@@ -94,37 +116,46 @@ h1{
 }
 #competence{
 	color:#f7d6b5;
-	margin-top:1000px;
 	display:block;
+	margin-top:20px;
 	margin-right:170px;
 	margin-left:70px;
 	margin-bottom:10px;
 }
 #experience{
 	color:#f7d6b5;
-	margin-top:1000px;
 	display:block;
+	margin-top:20px;
 	margin-right:170px;
 	margin-left:70px;
 	margin-bottom:10px;
 }
 #formation{
 	color:#f7d6b5;
-	margin-top:1000px;
 	display:block;
+	margin-top:20px;
 	margin-right:170px;
 	margin-left:70px;
 	margin-bottom:10px;
 }
 #contact{
 	color:#f7d6b5;
-	margin-top:1000px;
 	display:block;
+	margin-top:20px;
 	margin-right:170px;
 	margin-left:70px;
 	margin-bottom:10px;
 }
 
+#contacter{
+	color:#f7d6b5;
+	display:block;
+	margin-top:20px;
+	margin-right:1300px;
+	margin-left:70px;
+	margin-bottom:10px; 
+	background-color:#3a4657;
+}
 
 
 

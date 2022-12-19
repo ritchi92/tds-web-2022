@@ -15,7 +15,7 @@
 				<a href="#top"><img src="image/to_top.png" alt="TOP" /></a>
 			</div>
 				<ul class='menu'>
-					<li><a href='#acceuil'>|Acceuil|</a></li>
+					<li><a href='#acceuil'>|Accueil|</a></li>
 					<li><a href='#propos'>|A propos|</a></li>
 					<li><a href='#competence'>|Compétences|</a></li>
 					<li><a href='#experience'>|Expérience|</a></li>

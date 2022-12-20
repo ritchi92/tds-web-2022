@@ -140,22 +140,29 @@
 							echo'<h1 class="titre">'.$data["titre"].'</h1>';
 							echo'<span id="contacter">';
 						?>	
-							<form method="post">
+							 <form method="post">
 								<label>Votre email</label>
-								<input type="email" name="email" required><br>
+								<input type="email" name="email" required>
 								<label>Message</label>
-								<textarea name="message" required></textarea><br>
+								<textarea name="message" required></textarea>
 								<input type="submit">
 							</form>
 							<?php
 							if (isset($_POST['message'])) {
-								$retour = mail('loic.theaudin@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: webmaster@monsite.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
+								$entete  = 'MIME-Version: 1.0' . "\r\n";
+								$entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+								$entete .= 'From: webmaster@monsite.fr' . "\r\n";
+								$entete .= 'Reply-to: ' . $_POST['email'];
+
+								$message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
+								<p><b>Email : </b>' . $_POST['email'] . '<br>
+								<b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
+
+								$retour = mail('loic.theaudin@gmail.com', 'Envoi depuis page Contact', $message, $entete);
 								if($retour)
 									echo '<p>Votre message a bien été envoyé.</p>';
 							}
 							?>
-							
-						
 				</span>
 			</div>
 		</main>		

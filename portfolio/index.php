@@ -141,7 +141,7 @@
 							echo'<span id="contacter">';
 							
 						?>	
-						h1>Contactez-nous</h1>
+						<h1>Contactez-nous</h1>
 						<form method="post">
 							<label>Votre email</label>
 							<input type="email" name="email" required>
@@ -160,7 +160,7 @@
 							<p><b>Email : </b>' . $_POST['email'] . '<br>
 							<b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
 
-							$retour = mail('destinataire@free.fr', 'Envoi depuis page Contact', $message, $entete);
+							$retour = mail('loic.theaudin@gmail.com', 'Envoi depuis page Contact', $message, $entete);
 							if($retour)
 								echo '<p>Votre message a bien été envoyé.</p>';
 						}

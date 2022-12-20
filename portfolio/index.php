@@ -131,7 +131,6 @@
 				</h1>
 			
 				<span id='contact'>
-					<form action="verif.php" method="POST">
 						<?php
 							echo '<p>'.$data["descrip"].'</p>';
 							echo '<p>'.$data["numero"].'</p>';
@@ -169,16 +168,6 @@
 							mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
 								
 						?>	
-					</form>	
-					<script src="https://www.google.com/recaptcha/api.js?render=6LdTEpQjAAAAAJ2-0HVmeEYTTXM9zGmqChufFqZm"></script>
-					<script>
-					grecaptcha.ready(function() {
-						grecaptcha.execute('6LdTEpQjAAAAAJ2-0HVmeEYTTXM9zGmqChufFqZm', {action: 'homepage'}).then(function(token) {
-							document.getElementById('recaptchaResponse').value = token
-						});
-					});
-					</script>
-
 				</span>
 			</div>
 		</main>		

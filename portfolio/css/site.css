@@ -21,7 +21,7 @@ h1{
 	width: 100%;
 }
 .backgroundacceuil {
-	background-image: url("../image/image.jpg");
+	background-image: url("../image/accueil.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;
@@ -164,7 +164,7 @@ p{
 
 
 :root {
-  --css: #7645e9;
+  --css: #ad7445;
   --html: #e17055;
   --python: #359717;
   --php: #0d0ba7;

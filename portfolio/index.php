@@ -140,6 +140,7 @@
 							echo'<h1 class="titre">'.$data["titre"].'</h1>';
 							echo'<span id="contacter">';
 							
+							
 							echo '<p id="nom">'.$data["expediteur"].'</p>';
 							echo '<input type="text" name="prenom" value="" placeholder="votre nom et prénom"/>';
 							
@@ -165,7 +166,12 @@
 							echo '<input type="submit" value="Envoyer" />';
 							
 							mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
-								
+							if (isset($_POST['message'])) {
+								$retour = mail('loic.theaudin@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From:"expediteur" ' . "\r\n" . 'Reply-to: ' . $_POST['email']);
+								if($retour)
+									echo '<p>Votre message a bien été envoyé.</p>';
+							}
+							?>	
 						?>	
 				</span>
 			</div>

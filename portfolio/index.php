@@ -106,7 +106,7 @@
 					echo '<p>'.$data["cv"].'</p>';
 				?>
 				<a href="cv.docx" download>
-					<img src="image/iamgecv.png">
+					<img src="image/imagecv.png">
 				</a>	
 			</span>
 			<?php

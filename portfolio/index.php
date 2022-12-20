@@ -139,30 +139,35 @@
 							echo'</span>';
 							echo'<h1 class="titre">'.$data["titre"].'</h1>';
 							echo'<span id="contacter">';
+							
+							echo '<p id="nom">'.$data["expediteur"].'</p>';
+							echo '<input type="text" name="prenom" value="" placeholder="votre nom et prénom"/>';
+							
+							echo '<p>'.$data["civilite"].'</p>';
+							echo '<input type="radio" name="civi2" value="Mme" /> Madame
+								<input type="radio" name="civi2" value="Mlle" /> Mademoiselle
+								<input type="radio" name="civi2" value="Mr" checked="checked" /> Monsieur';
+							
+							echo '<p id="email">'.$data["adresse"].'</p>';
+							echo'<input type="text" name="adresse" value="" placeholder="votre adresse" />';
+							
+							echo '<p id="sujet">'.$data["objet"].'</p>';
+							echo '<textarea name="le-message" rows="1" cols="40" placeholder="saisisez votre raison"></textarea>';
+							
+							echo '<p id="message">'.$data["contenu"].'</p>';
+							echo '<textarea name="le-message" rows="6" cols="40" placeholder="saisisez votre message"></textarea>';
+							
+							echo '<p>'.$data["captcha"].'</p>';
+							echo '<input type="radio" name="civi" value="Mme" /> oui
+									<input type="radio" name="civi" value="Mlle" /> non';
+							echo '<p>'.$data["envoi"].'</p>';
+							
+							
+							mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
+							echo '<input type="submit" value="Envoyer" />';
+							
+							
 						?>	
-							 <form method="post">
-								<label>Votre email</label>
-								<input type="email" name="email" required>
-								<label>Message</label>
-								<textarea name="message" required></textarea>
-								<input type="submit">
-							</form>
-							<?php
-							if (isset($_POST['message'])) {
-								$entete  = 'MIME-Version: 1.0' . "\r\n";
-								$entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-								$entete .= 'From: webmaster@monsite.fr' . "\r\n";
-								$entete .= 'Reply-to: ' . $_POST['email'];
-
-								$message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
-								<p><b>Email : </b>' . $_POST['email'] . '<br>
-								<b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
-
-								$retour = mail('loic.theaudin@gmail.com', 'Envoi depuis page Contact', $message, $entete);
-								if($retour)
-									echo '<p>Votre message a bien été envoyé.</p>';
-							}
-							?>
 				</span>
 			</div>
 		</main>		

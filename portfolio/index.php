@@ -38,7 +38,7 @@
 					echo '<p>'.$data["nomprenom"].'</p>';
 					echo '<p>'.$data["accroche"].'</p>';
 				?>
-				<img src="image\presentation.jpg">
+				<img id='moi' src="image\presentation.jpg" >
 			</span>
 	</div>
 	

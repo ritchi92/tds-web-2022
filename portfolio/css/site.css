@@ -10,9 +10,13 @@ h1{
 	margin-right:170px;
 	margin-left:70px;
 	margin-bottom:10px;
-	width:50%:;
-	
-	
+	width:50%:;	
+
+}
+#moi{
+	width:10%; 
+	height:10%; 
+
 }
 .backgroundcontact {
 	background-image: url("../image/contact.jpg");

@@ -97,6 +97,8 @@
 				<?php
 					echo '<p>'.$data["titre"].'</p>';
 					echo '<p>'.$data["descrip"].'</p>';
+					echo '<p>'.$data["cv"].'</p>';
+
 
 				?>
 			</span>

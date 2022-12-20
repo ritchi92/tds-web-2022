@@ -54,6 +54,11 @@
 			<?php
 					echo '<p>'.$data["accroche"].'</p>';
 					echo '<p>'.$data["descrip"].'</p>';
+					echo '<p>'.$data["loisir"].'</p>';
+					echo '<p>'.$data["jaime"].'</p>';
+					echo '<p>'.$data["ambition"].'</p>';
+
+
 			?>
 		</span>
 	</div>

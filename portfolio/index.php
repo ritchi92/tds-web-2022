@@ -38,6 +38,7 @@
 					echo '<p>'.$data["nomprenom"].'</p>';
 					echo '<p>'.$data["accroche"].'</p>';
 				?>
+				<img src=\tds-web-2022\portfolio\image\presentation.jpg>
 			</span>
 	</div>
 	

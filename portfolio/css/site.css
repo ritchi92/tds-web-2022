@@ -28,7 +28,7 @@ h1{
 	
 }
 .backgroundpropos {
-	background-image: url("../image/propos.jpg");
+	background-image: url("../image/imagepropos.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;
@@ -164,7 +164,7 @@ p{
 
 
 :root {
-  --css: #ad7445;
+  --css: #c09877;
   --html: #e17055;
   --python: #359717;
   --php: #0d0ba7;

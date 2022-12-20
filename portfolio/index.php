@@ -165,8 +165,6 @@
 							
 							mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
 							echo '<input type="submit" value="Envoyer" />';
-							
-							
 						?>	
 				</span>
 			</div>

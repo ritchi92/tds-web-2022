@@ -131,46 +131,54 @@
 				</h1>
 			
 				<span id='contact'>
-					<?php
-						echo '<p>'.$data["descrip"].'</p>';
-						echo '<p>'.$data["numero"].'</p>';
-						echo '<p>'.$data["reseaux"].'</p>';
+					<form action="verif.php" method="POST">
+						<?php
+							echo '<p>'.$data["descrip"].'</p>';
+							echo '<p>'.$data["numero"].'</p>';
+							echo '<p>'.$data["reseaux"].'</p>';
 
-						echo'</span>';
-						echo'<h1 class="titre">'.$data["titre"].'</h1>';
-						echo'<span id="contacter">';
-						
-						echo '<p>'.$data["expediteur"].'</p>';
-						echo '<input type="text" name="prenom" value="" placeholder="votre nom et prénom"/>';
-						
-						echo '<p>'.$data["mdp"].'</p>';
-						echo '<input type="password" name="motdepasse" value="" placeholder="votre mot de passe" />';
-						
-						echo '<p>'.$data["civilite"].'</p>';
-						echo '<input type="radio" name="civi2" value="Mme" /> Madame
-							<input type="radio" name="civi2" value="Mlle" /> Mademoiselle
-							<input type="radio" name="civi2" value="Mr" checked="checked" /> Monsieur';
-						
-						echo '<p>'.$data["adresse"].'</p>';
-						echo'<input type="text" name="adresse" value="" placeholder="votre adresse" />';
-						
-						echo '<p>'.$data["objet"].'</p>';
-						echo '<textarea name="le-message" rows="1" cols="40" placeholder="saisisez votre raison"></textarea>';
-						
-						echo '<p>'.$data["contenu"].'</p>';
-						echo '<textarea name="le-message" rows="6" cols="40" placeholder="saisisez votre message"></textarea>';
-						
-						echo '<p>'.$data["captcha"].'</p>';
-						echo '<input type="radio" name="civi" value="Mme" /> oui
-								<input type="radio" name="civi" value="Mlle" /> non';
-						echo '<p>'.$data["envoi"].'</p>';
-						
-						echo '<input type="submit" value="Envoyer" />';
-						echo ' <input type="reset" value="Annuler" />';
-						
-						mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
+							echo'</span>';
+							echo'<h1 class="titre">'.$data["titre"].'</h1>';
+							echo'<span id="contacter">';
 							
-					?>	
+							echo '<p id="nom">'.$data["expediteur"].'</p>';
+							echo '<input type="text" name="prenom" value="" placeholder="votre nom et prénom"/>';
+							
+							echo '<p>'.$data["civilite"].'</p>';
+							echo '<input type="radio" name="civi2" value="Mme" /> Madame
+								<input type="radio" name="civi2" value="Mlle" /> Mademoiselle
+								<input type="radio" name="civi2" value="Mr" checked="checked" /> Monsieur';
+							
+							echo '<p id="email">'.$data["adresse"].'</p>';
+							echo'<input type="text" name="adresse" value="" placeholder="votre adresse" />';
+							
+							echo '<p id="sujet">'.$data["objet"].'</p>';
+							echo '<textarea name="le-message" rows="1" cols="40" placeholder="saisisez votre raison"></textarea>';
+							
+							echo '<p id="message">'.$data["contenu"].'</p>';
+							echo '<textarea name="le-message" rows="6" cols="40" placeholder="saisisez votre message"></textarea>';
+							
+							echo '<p>'.$data["captcha"].'</p>';
+							echo '<input type="radio" name="civi" value="Mme" /> oui
+									<input type="radio" name="civi" value="Mlle" /> non';
+							echo '<p>'.$data["envoi"].'</p>';
+							
+							echo '<input type="hidden" id="recaptchaResponse" name="recaptcha-response">'
+							echo '<input type="submit" value="Envoyer" />';
+							
+							mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
+								
+						?>	
+					</form>	
+					<script src="https://www.google.com/recaptcha/api.js?render=6LdTEpQjAAAAAJ2-0HVmeEYTTXM9zGmqChufFqZm"></script>
+					<script>
+					grecaptcha.ready(function() {
+						grecaptcha.execute('6LdTEpQjAAAAAJ2-0HVmeEYTTXM9zGmqChufFqZm', {action: 'homepage'}).then(function(token) {
+							document.getElementById('recaptchaResponse').value = token
+						});
+					});
+					</script>
+
 				</span>
 			</div>
 		</main>		

@@ -163,7 +163,7 @@
 							echo '<p>'.$data["envoi"].'</p>';
 							
 							
-							mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
+							mail('loic.theaudin@sts-sio-caen.info','objet',$_POST['contenu'],'From :"adresse" ');
 							echo '<input type="submit" value="Envoyer" />';
 						?>	
 				</span>

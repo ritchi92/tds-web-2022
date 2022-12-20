@@ -64,7 +64,9 @@ h1{
 	color:#f7d6b5;
 }
 body{
-	background-color:#5d697c;		
+	background-color:#5d697c;
+	padding :0;
+	margin:0;		
 }
 #bouton{
 	position: fixed;

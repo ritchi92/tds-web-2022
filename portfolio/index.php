@@ -105,8 +105,8 @@
 					echo '<p>'.$data["descrip"].'</p>';
 					echo '<p>'.$data["cv"].'</p>';
 				?>
-				<a id ="cv" href="cv.docx" download>
-					<img src="image/imagecv.png">
+				<a href="cv.docx" download>
+					<img id ="cv" src="image/imagecv.png">
 				</a>	
 			</span>
 			<?php

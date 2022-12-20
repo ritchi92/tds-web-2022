@@ -162,7 +162,6 @@
 									<input type="radio" name="civi" value="Mlle" /> non';
 							echo '<p>'.$data["envoi"].'</p>';
 							
-							echo '<input type="hidden" id="recaptchaResponse" name="recaptcha-response">'
 							echo '<input type="submit" value="Envoyer" />';
 							
 							mail('loic.theaudin@sts-sio-caen.info','objet','contenu');

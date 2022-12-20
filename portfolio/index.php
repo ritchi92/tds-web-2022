@@ -105,7 +105,9 @@
 					echo '<p>'.$data["descrip"].'</p>';
 					echo '<p>'.$data["cv"].'</p>';
 				?>
-				<a href="cv.docx" download></a>
+				<a href="cv.docx" download>
+					<img src="image/iamgecv.png">
+				</a>	
 			</span>
 			<?php
 			$data=yaml_parse_file('yaml/formation.yaml');

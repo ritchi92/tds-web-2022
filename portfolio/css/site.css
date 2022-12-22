@@ -5,6 +5,7 @@ html{
 span{
 	margin-right:auto;
 	margin-left:auto;
+	text-align: center;
 
 }
 h1{
@@ -107,8 +108,6 @@ body{
 p{
 	color:#f7d6b5;
 	display:block;
-	margin-right:170px;
-	margin-left:70px;
 	margin-bottom:10px;
 	
 }

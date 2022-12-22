@@ -134,8 +134,11 @@
 						<?php
 							echo '<p>'.$data["descrip"].'</p>';
 							echo '<p>'.$data["numero"].'</p>';
-							echo '<p>'.$data["reseaux"].'</p>';
-
+							echo '<p>'.$data["dicord"].'</p>';
+							echo'<a href="https://discord.com/" target="_blank">
+								<img src="image/dicord.png" />'
+							=echo'<a href="https://linkedin.com/" target="_blank">
+								<img src="image/linkedin.png" />'
 							echo'</span>';
 							echo'<h1 class="titre">'.$data["titre"].'</h1>';
 							echo'<span id="contacter">';

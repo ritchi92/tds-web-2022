@@ -137,7 +137,7 @@
 							echo '<p>'.$data["dicord"].'</p>';
 							echo'<a href="https://discord.com/" target="_blank">
 								<img src="image/dicord.png" />'
-							=echo'<a href="https://linkedin.com/" target="_blank">
+							echo'<a href="https://linkedin.com/" target="_blank">
 								<img src="image/linkedin.png" />'
 							echo'</span>';
 							echo'<h1 class="titre">'.$data["titre"].'</h1>';

@@ -2,6 +2,11 @@ html{
 	scroll-behavior:smooth;
 	
 }
+span{
+	margin-right:auto;
+	margin-left:auto;
+
+}
 h1{
 	color:#f7d6b5;
 	display:flex;
@@ -102,8 +107,8 @@ body{
 p{
 	color:#f7d6b5;
 	display:block;
-	margin-right:auto;
-	margin-left:auto;
+	margin-right:170px;
+	margin-left:70px;
 	margin-bottom:10px;
 	
 }

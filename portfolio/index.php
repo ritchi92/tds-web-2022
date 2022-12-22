@@ -73,7 +73,7 @@
 			?>
 		</h1>
 	
-		<span id='competence'>
+		<div id='competence'>
 			<h1 class='titre'>
 				Compétences
 			</h1>
@@ -92,7 +92,7 @@
 				?>	 
 			</div>
 			
-			</span>
+			</div>
 				<?php
 				$data=yaml_parse_file('yaml/experience.yaml');
 				?>

@@ -135,12 +135,12 @@
 							echo '<p>'.$data["descrip"].'</p>';
 							echo '<p>'.$data["numero"].'</p>';
 							echo '<p>'.$data["dicord"].'</p>';
-							echo'<a id="imagecontact" href="https://discord.com/" target="_blank">
-								<img src="image/discord.png" />
+							echo'<a href="https://discord.com/" target="_blank">
+								<img class="imagecontact" src="image/discord.png" />
 								</a>';
 
-							echo'<a id="imagecontact" href="https://linkedin.com/" target="_blank">
-								<img src="image/linkedin.png" />
+							echo'<a href="https://linkedin.com/" target="_blank">
+								<img  class="imagecontact" src="image/linkedin.png" />
 								</a>';
 
 							echo'</span>';

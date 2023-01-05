@@ -15,7 +15,7 @@
 				<a href="#top"><img src="image/to_top.png" alt="TOP" /></a>
 			</div>
 				<ul class='menu'>
-					<li><a href='#acceuil'>|Acceuil|</a></li>
+					<li><a href='#acceuil'>|Accueil|</a></li>
 					<li><a href='#propos'>|A propos|</a></li>
 					<li><a href='#competence'>|Compétences|</a></li>
 					<li><a href='#experience'>|Expérience|</a></li>
@@ -38,6 +38,7 @@
 					echo '<p>'.$data["nomprenom"].'</p>';
 					echo '<p>'.$data["accroche"].'</p>';
 				?>
+				<img id='moi' src="image\presentation.jpg" >
 			</span>
 	</div>
 	
@@ -53,6 +54,11 @@
 			<?php
 					echo '<p>'.$data["accroche"].'</p>';
 					echo '<p>'.$data["descrip"].'</p>';
+					echo '<p>'.$data["loisir"].'</p>';
+					echo '<p>'.$data["jaime"].'</p>';
+					echo '<p>'.$data["ambition"].'</p>';
+
+
 			?>
 		</span>
 	</div>
@@ -67,7 +73,7 @@
 			?>
 		</h1>
 	
-		<span id='competence'>
+		<div id='competence'>
 			<h1 class='titre'>
 				Compétences
 			</h1>
@@ -86,7 +92,7 @@
 				?>	 
 			</div>
 			
-			</span>
+			</div>
 				<?php
 				$data=yaml_parse_file('yaml/experience.yaml');
 				?>
@@ -97,8 +103,11 @@
 				<?php
 					echo '<p>'.$data["titre"].'</p>';
 					echo '<p>'.$data["descrip"].'</p>';
-
+					echo '<p>'.$data["cv"].'</p>';
 				?>
+				<a href="cv.docx" download>
+					<img id ="cv" src="image/imagecv.png">
+				</a>	
 			</span>
 			<?php
 			$data=yaml_parse_file('yaml/formation.yaml');
@@ -122,46 +131,48 @@
 				</h1>
 			
 				<span id='contact'>
-					<?php
-						echo '<p>'.$data["descrip"].'</p>';
-						echo '<p>'.$data["numero"].'</p>';
-						echo '<p>'.$data["reseaux"].'</p>';
+						<?php
+							echo '<p>'.$data["descrip"].'</p>';
+							echo '<p>'.$data["numero"].'</p>';
+							echo '<p>'.$data["dicord"].'</p>';
+							echo'<a href="https://discord.com/" target="_blank">
+								<img class="imagecontact" src="image/discord.png" />
+								</a>';
 
-						echo'</span>';
-						echo'<h1 class="titre">'.$data["titre"].'</h1>';
-						echo'<span id="contacter">';
-						
-						echo '<p>'.$data["expediteur"].'</p>';
-						echo '<input type="text" name="prenom" value="" placeholder="votre nom et prénom"/>';
-						
-						echo '<p>'.$data["mdp"].'</p>';
-						echo '<input type="password" name="motdepasse" value="" placeholder="votre mot de passe" />';
-						
-						echo '<p>'.$data["civilite"].'</p>';
-						echo '<input type="radio" name="civi2" value="Mme" /> Madame
-							<input type="radio" name="civi2" value="Mlle" /> Mademoiselle
-							<input type="radio" name="civi2" value="Mr" checked="checked" /> Monsieur';
-						
-						echo '<p>'.$data["adresse"].'</p>';
-						echo'<input type="text" name="adresse" value="" placeholder="votre adresse" />';
-						
-						echo '<p>'.$data["objet"].'</p>';
-						echo '<textarea name="le-message" rows="1" cols="40" placeholder="saisisez votre raison"></textarea>';
-						
-						echo '<p>'.$data["contenu"].'</p>';
-						echo '<textarea name="le-message" rows="6" cols="40" placeholder="saisisez votre message"></textarea>';
-						
-						echo '<p>'.$data["captcha"].'</p>';
-						echo '<input type="radio" name="civi" value="Mme" /> oui
-								<input type="radio" name="civi" value="Mlle" /> non';
-						echo '<p>'.$data["envoi"].'</p>';
-						
-						echo '<input type="submit" value="Envoyer" />';
-						echo ' <input type="reset" value="Annuler" />';
-						
-						mail('loic.theaudin@sts-sio-caen.info','objet','contenu');
+							echo'<a href="https://linkedin.com/" target="_blank">
+								<img  class="imagecontact" src="image/linkedin.png" />
+								</a>';
+
+							echo'</span>';
+							echo'<h1 class="titre">'.$data["titre"].'</h1>';
+							echo'<span id="contacter">';
 							
-					?>	
+							echo '<p id="nom">'.$data["expediteur"].'</p>';
+							echo '<input type="text" name="prenom" value="" placeholder="votre nom et prénom"/>';
+							
+							echo '<p>'.$data["civilite"].'</p>';
+							echo '<input type="radio" name="civi2" value="Mme" /> Madame
+								<input type="radio" name="civi2" value="Mlle" /> Mademoiselle
+								<input type="radio" name="civi2" value="Mr" checked="checked" /> Monsieur';
+							
+							echo '<p id="email">'.$data["adresse"].'</p>';
+							echo'<input type="text" name="adresse" value="" placeholder="votre adresse" />';
+							
+							echo '<p id="sujet">'.$data["objet"].'</p>';
+							echo '<textarea name="le-message" rows="1" cols="40" placeholder="saisisez votre raison"></textarea>';
+							
+							echo '<p id="message">'.$data["contenu"].'</p>';
+							echo '<textarea name="le-message" rows="6" cols="40" placeholder="saisisez votre message"></textarea>';
+							
+							echo '<p>'.$data["captcha"].'</p>';
+							echo '<input type="radio" name="civi" value="Mme" /> oui
+									<input type="radio" name="civi" value="Mlle" /> non';
+							echo '<p>'.$data["envoi"].'</p>';
+							
+							
+							mail('loic.theaudin@sts-sio-caen.info','objet',$_POST['contenu'],'From :"adresse" ');
+							echo '<input type="submit" value="Envoyer" />';
+						?>	
 				</span>
 			</div>
 		</main>		
